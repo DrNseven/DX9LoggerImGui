@@ -119,7 +119,7 @@ HRESULT APIENTRY DrawIndexedPrimitive_hook(IDirect3DDevice9* pDevice, D3DPRIMITI
 
 	//logger
 	if ((countStride == Stride || countnumElements == numElements || countmStartregister == mStartregister || countmVectorCount == mVectorCount) ||
-		(countNumVertices == NumVertices / 100) || (countvSize == vSize / 100) || (countpSize == pSize / 100))
+		(countNumVertices == NumVertices / 100) || (countvSize == vSize / 100) || (countpSize == pSize / 100) || (countnumPrimitives == primCount / 100)
 		if (GetAsyncKeyState(VK_END) & 1) //log
 			Log("Stride == %d && NumVertices == %d && vSize == %d && pSize == %d numElements == %d && decl->Type == %d && mStartregister == %d && mVectorCount == %d",
 				Stride, NumVertices, vSize, pSize, numElements, decl->Type, mStartregister, mVectorCount);
@@ -284,6 +284,8 @@ HRESULT APIENTRY EndScene_hook(IDirect3DDevice9* pDevice)
 		ImGui::SliderInt("find pSize", &countpSize, -1, 100);
 		ImGui::SliderInt("find mStartregister", &countmStartregister, -1, 100);
 		ImGui::SliderInt("find mVectorCount", &countmVectorCount, -1, 100);
+		ImGui::SliderInt("find primCount", &countnumPrimitives, -1, 100);
+		
 		//ImGui::Checkbox("Aimbot", &aimbot);
 		//ImGui::SliderInt("Aim Key", &aimkey, 0, 8);
 		//ImGui::SliderInt("Aim Sensitivity", &aimsens, 0, 10);

@@ -83,6 +83,7 @@ int countvSize = -1;
 int countpSize = -1;
 int countmStartregister = -1;
 int countmVectorCount = -1;
+int countnumPrimitives = -1;
 
 LPDIRECT3DTEXTURE9 Red, Green, Blue, Yellow;
 
@@ -252,6 +253,7 @@ void SaveCfg()
 	fout << "aimfov " << aimfov << endl;
 	fout << "aimheight " << aimheight << endl;
 	fout << "autoshoot " << autoshoot << endl;
+	fout << "countnumPrimitives" << countnumPrimitives << endl;
 	fout.close();
 }
 
@@ -268,6 +270,7 @@ void LoadCfg()
 	fin >> Word >> aimfov;
 	fin >> Word >> aimheight;
 	fin >> Word >> autoshoot;
+	fin >> Word >> countnumPrimitives;
 	fin.close();
 }
 
