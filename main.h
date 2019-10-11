@@ -83,6 +83,7 @@ int countvSize = -1;
 int countpSize = -1;
 int countmStartregister = -1;
 int countmVectorCount = -1;
+int countnumPrimitives = -1;
 
 LPDIRECT3DTEXTURE9 Red, Green, Blue, Yellow;
 
