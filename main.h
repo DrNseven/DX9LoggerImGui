@@ -253,6 +253,7 @@ void SaveCfg()
 	fout << "aimfov " << aimfov << endl;
 	fout << "aimheight " << aimheight << endl;
 	fout << "autoshoot " << autoshoot << endl;
+	fout << "countnumPrimitives" << countnumPrimitives << endl;
 	fout.close();
 }
 
@@ -269,6 +270,7 @@ void LoadCfg()
 	fin >> Word >> aimfov;
 	fin >> Word >> aimheight;
 	fin >> Word >> autoshoot;
+	fin >> Word >> countnumPrimitives;
 	fin.close();
 }
 
